@@ -62,7 +62,14 @@
             #binding-cells = <0>;
             bindings = <&kp Y &kp M &kp O &kp R &kp I &kp T &kp A &kp N &kp I &kp N0 &kp N0 &kp N1 &kp TAB &kp R &kp O &kp N &kp B &kp A &kp K &kp U &kp N2 &kp N2 &kp AT &kp ENTER>;
             label = "LOG_IN";
-            wait-ms = <30>;
+            wait-ms = <20>;
+        };
+
+        jump_cell: jump_cell {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F5 &kp ENTER>;
+            label = "JUMP_CELL";
         };
     };
 
@@ -94,10 +101,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                      &kp T                                                      &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                      &kp G           &kp LS(LG(S))             &kp EQUAL        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C         &kp V                      &kp B           &kp COLON                 &lt 6 SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
-&kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &kp LEFT_SHIFT  &mt LCTRL INT_HENKAN      &lt 2 BACKSPACE  &lt 1 ENTER                             &kp PRINTSCREEN
+&kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F                      &kp G                 &mkp MB3                  &kp EQUAL        &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C         &kp V                      &kp B                 &kp AT_SIGN               &lt 6 SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
+&kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 2 BACKSPACE  &lt 1 ENTER                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -106,7 +113,7 @@
 
         FUNCTION {
             bindings = <
-&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACKET  &kp F5
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &kp EQUAL      &trans  &kp BACKSPACE         &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp DELETE
 &kp COLON     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp COMMA      &trans  &trans                &kp HOME               &trans          &kp END           &kp SLASH
 &trans        &trans        &kp NUMBER_0  &trans        &trans      &trans         &trans  &trans                                                                         &log_in
@@ -128,13 +135,13 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&trans  &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LC(LEFT_BRACKET)                      &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &jump_cell            &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &trans                &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans                &trans                 &trans                &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         MOUSE {
