@@ -47,6 +47,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
+
+        Copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <24 26>;
+        };
+
+        Paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <24 25>;
+        };
+
+        Cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <24 23>;
+        };
     };
 
     macros {
