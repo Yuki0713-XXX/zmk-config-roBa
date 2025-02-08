@@ -104,25 +104,14 @@
 &kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F                      &kp G                 &mkp MB3                  &kp EQUAL        &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z      &kp X         &kp C         &kp V                      &kp B                 &kp AT_SIGN               &lt 6 SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
-&kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 2 BACKSPACE  &lt 1 ENTER                             &kp PRINTSCREEN
+&kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 3 BACKSPACE  &lt 2 ENTER                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
             sensor-bindings = <&scroll_up_down>;
         };
 
-        FUNCTION {
-            bindings = <
-&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &kp EQUAL      &trans  &kp BACKSPACE         &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp DELETE
-&kp COLON     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp COMMA      &trans  &trans                &kp HOME               &trans          &kp END           &kp SLASH
-&trans        &trans        &kp NUMBER_0  &trans        &trans      &trans         &trans  &trans                                                                         &log_in
-            >;
-
-            sensor-bindings = <&scroll_up_down>;
-        };
-
-        NUM {
+        Windows {
             bindings = <
 &trans  &kp F7  &kp F8  &kp F9  &kp F10                      &trans  &trans  &trans  &trans  &trans
 &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -133,12 +122,23 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        ARROW {
+        Number {
             bindings = <
-&trans  &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LC(LEFT_BRACKET)                      &trans  &trans  &trans  &trans  &trans
-&trans  &kp DOLLAR       &kp PERCENT           &kp AMPERSAND          &jump_cell            &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES     &kp HASH               &trans                &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans                &trans                 &trans                &trans      &trans  &trans                          &trans
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &kp EQUAL      &trans  &kp BACKSPACE         &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp DELETE
+&kp COLON     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp COMMA      &trans  &trans                &kp HOME               &trans          &kp END           &kp SLASH
+&trans        &trans        &kp NUMBER_0  &trans        &trans      &trans         &trans  &trans                                                                         &log_in
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
+        };
+
+        Function {
+            bindings = <
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                                    &trans  &kp SQT          &kp RIGHT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &kp LC(LEFT_BRACKET)      &trans  &trans  &kp DOLLAR       &kp PERCENT            &kp AMPERSAND          &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F12  &jump_cell                &trans  &trans  &kp EXCLAMATION  &kp DOUBLE_QUOTES      &kp HASH               &trans
+&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans                                                                 &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
