@@ -24,7 +24,7 @@
         };
 
         eq {
-            bindings = <&kp LS(EQUAL)>;
+            bindings = <&kp LS(MINUS)>;
             key-positions = <20 21>;
         };
 
@@ -83,7 +83,8 @@
         jump_cell: jump_cell {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F5 &kp ENTER>;
+            bindings = <&kp F5>, <&macro_wait_time 20>, <&kp ENTER>;
+
             label = "JUMP_CELL";
         };
 
@@ -214,10 +215,10 @@
 
         Function_Windows {
             bindings = <
-&trans         &kp F7  &kp F8  &kp F9  &kp F10                                    &trans            &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp INT_YEN
-&Today         &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp LC(LEFT_BRACKET)  &kp LA(UP_ARROW)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LC(W)
-&kp LS(LC(N))  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &jump_cell            &kp ENTER         &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans
-&trans         &trans  &trans  &trans  &trans   &trans      &trans                &trans                                                                  &kp LA(F4)
+&trans         &kp F7  &kp F8  &kp F9  &kp F10                                &trans            &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp INT_YEN
+&Today         &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp LC(ASTERISK)  &kp LA(UP_ARROW)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LC(W)
+&kp RS(RC(N))  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &jump_cell        &kp ENTER         &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans
+&trans         &trans  &trans  &trans  &trans   &trans      &trans            &trans                                                                  &kp LA(F4)
             >;
 
             sensor-bindings = <&scroll_up_down>;
