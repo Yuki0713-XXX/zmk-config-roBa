@@ -94,20 +94,6 @@
 
             tap-ms = <20>;
         };
-
-        tog_on: toggle_layer_on_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer On";
-            toggle-mode = "on";
-        };
-
-        tog_off: toggle_layer_off_only {
-            compatible = "zmk,behavior-toggle-layer";
-            #binding-cells = <1>;
-            display-name = "Toggle Layer Off";
-            toggle-mode = "off";
-        };
     };
 
     keymap {
@@ -115,8 +101,8 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &lt 6 I    &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                      &kp G                 &kp LC(W)                 &kp LS(INT1)     &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F                      &kp G                 &kp LC(W)                 &kp LS(INT1)     &kp H        &kp J  &kp K      &lt 5 L  &kp MINUS
 &kp Z      &kp X         &kp C         &kp V                      &kp B                 &kp LEFT_BRACKET          &lt 7 SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
 &kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 3 BACKSPACE  &lt 2 ENTER                             &kp PRINTSCREEN
             >;
@@ -127,8 +113,8 @@
 
         Windows {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &lt 6 I    &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                      &kp G                 &kp LC(W)                 &kp LS(INT1)     &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F                      &kp G                 &kp LC(W)                 &kp LS(INT1)     &kp H        &kp J  &kp K      &lt 5 L  &kp MINUS
 &kp Z      &kp X         &kp C         &kp V                      &kp B                 &kp LEFT_BRACKET          &lt 7 SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
 &kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 4 BACKSPACE  &lt 2 ENTER                             &kp PRINTSCREEN
             >;
@@ -171,10 +157,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                               &trans             &trans              &trans               &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LS(LG(TAB))  &kp LG(TAB)                                                         &trans
             >;
         };
 
