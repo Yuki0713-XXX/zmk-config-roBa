@@ -116,7 +116,7 @@
 &kp Q      &kp W         &kp E         &kp R                      &kp T                                                            &kp Y        &kp U  &lt 6 I    &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F                      &kp G                 &kp LC(W)                 &kp LS(INT1)     &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z      &kp X         &kp C         &kp V                      &kp B                 &kp LEFT_BRACKET          &lt 7 SLASH      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
-&kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 3 BACKSPACE  &lt 2 ENTER                             &kp PRINTSCREEN
+&kp LC(Z)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LCTRL INT_HENKAN      &lt 4 BACKSPACE  &lt 2 ENTER                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
