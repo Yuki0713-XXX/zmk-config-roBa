@@ -5,9 +5,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-#define MOUSE 4
-#define SCROLL 5
-#define NUM 6
+#define MOUSE 5
+#define SCROLL 6
+#define NUM 2
 
 &mt {
     flavor = "balanced";
@@ -93,6 +93,20 @@
             // 追加: スクロールのタップ時間を設定 (20ms)
 
             tap-ms = <20>;
+        };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
     };
 
