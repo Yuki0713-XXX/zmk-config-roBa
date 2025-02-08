@@ -119,6 +119,8 @@
                 <&kp LC(LS(D))>,
                 <&macro_wait_time 20>,
                 <&kp LEFT_SHIFT &kp LCTRL>,
+                <&macro_wait_time 20>,
+                <&kp LEFT_SHIFT &kp LCTRL>,
                 <&macro_wait_time 20>;
 
             label = "TODAY";
@@ -192,7 +194,7 @@
             bindings = <
 &kp SLASH          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &kp DOUBLE_QUOTES  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON   &kp LS(MINUS)      &trans  &kp BACKSPACE         &kp LEFT_ARROW         &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp DELETE
-&kp SINGLE_QUOTE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp COMMA          &trans  &trans                &kp HOME               &trans          &kp END           &kp SLASH
+&kp SINGLE_QUOTE   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD  &kp COMMA          &trans  &trans                &kp HOME               &kp DOWN_ARROW  &kp END           &kp SLASH
 &trans             &trans        &kp NUMBER_0  &trans        &trans      &trans             &trans  &trans                                                                         &log_in
             >;
 
@@ -201,10 +203,10 @@
 
         Function_Mac {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                                    &trans              &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp INT_YEN
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &kp LC(LEFT_BRACKET)      &trans  &kp LC(UP_ARROW)    &kp RS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LC(W)
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &jump_cell                &trans  &kp LC(DOWN_ARROW)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans                                                                    &trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                      &trans              &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp INT_YEN
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &trans  &kp LC(UP_ARROW)    &kp RS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LC(W)
+&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &trans  &kp LC(DOWN_ARROW)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans
+&trans  &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                                    &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -212,10 +214,10 @@
 
         Function_Windows {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                                    &trans              &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp INT_YEN
-&Today  &kp F4  &kp F5  &kp F6  &kp F11  &kp LC(LEFT_BRACKET)      &trans  &kp LA(UP_ARROW)    &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LC(W)
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &jump_cell                &trans  &kp LA(DOWN_ARROW)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans
-&trans  &trans  &trans  &trans  &trans   &trans                    &trans  &trans                                                                    &kp LA(F4)
+&trans         &kp F7  &kp F8  &kp F9  &kp F10                                    &trans            &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp INT_YEN
+&Today         &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp LC(LEFT_BRACKET)  &kp LA(UP_ARROW)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LC(W)
+&kp LS(LC(N))  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &jump_cell            &kp ENTER         &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &trans
+&trans         &trans  &trans  &trans  &trans   &trans      &trans                &trans                                                                  &kp LA(F4)
             >;
 
             sensor-bindings = <&scroll_up_down>;
