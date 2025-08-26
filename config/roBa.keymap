@@ -74,7 +74,7 @@
         log_in: log_in {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Y &kp M &kp O &kp R &kp I &kp T &kp A &kp N &kp I &kp N0 &kp N0 &kp N1 &kp TAB &kp R &kp O &kp N &kp B &kp A &kp K &kp U &kp N2 &kp N4 &kp LEFT_BRACKET &kp ENTER>;
+            bindings = <&kp Y &kp M &kp O &kp R &kp I &kp T &kp A &kp N &kp I &kp N0 &kp N0 &kp N1 &kp TAB &kp R &kp O &kp N &kp B &kp A &kp K &kp U &kp N2 &kp N5 &kp LEFT_BRACKET &kp ENTER>;
             label = "LOG_IN";
             wait-ms = <20>;
         };
